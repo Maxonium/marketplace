@@ -22,6 +22,16 @@ public class ProductService
         return productEntities;
     }
 
+    public ProductEntity getById(Long id)
+    {
+        for (ProductEntity product : productEntities)
+        {
+            if (product.getId().equals(id));
+            return product;
+        }
+        return null;
+    }
+
     public void save(ProductEntity product)
     {
         product.setId(++ID);

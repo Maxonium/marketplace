@@ -22,6 +22,13 @@ public class ProductController
         return "products";
     }
 
+    @GetMapping("/product/{id}")
+    public String productInfo(@PathVariable Long id, Model model)
+    {
+        model.addAttribute("product-info", productService.getById(id));
+        return "/product-info/{id}";
+    }
+
     @PostMapping("/product/create")
     public String createProduct(ProductEntity product)
     {
