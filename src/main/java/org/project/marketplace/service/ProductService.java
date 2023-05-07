@@ -24,9 +24,9 @@ public class ProductService
 
     public ProductEntity getProductById(Long id)
     {
-        for (ProductEntity product : productEntities)
+        for (ProductEntity productEntity : productEntities)
         {
-            if (product.getId().equals(id)) return product;
+            if (productEntity.getId().equals(id)) return productEntity;
         }
         return null;
     }

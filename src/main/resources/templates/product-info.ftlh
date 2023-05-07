@@ -7,13 +7,13 @@
 <body>
 <h1>Marketplace</h1><hr>
 <h4>Подробная информация о товаре</h4>
-<b>Название товара: </b>${product.title}<br>
-<b>Описание товара: </b>${product.description}<br>
-<b>Цена: </b>${product.price}<br>
-<b>Город: </b>${product.city}<br>
-<b>Автор: </b>${product.author}<br>
+<b>Название товара: </b>${productEntity.title}<br>
+<b>Описание товара: </b>${productEntity.description}<br>
+<b>Цена: </b>${productEntity.price}<br>
+<b>Город: </b>${productEntity.city}<br>
+<b>Автор: </b>${productEntity.author}<br>
 <hr>
-<form action="/product/delete/${product.id}" method="post">
+<form action="/product/delete/${productEntity.id}" method="post">
     <input type="submit" value="Удалить товар"/>
 </form>
 </body>

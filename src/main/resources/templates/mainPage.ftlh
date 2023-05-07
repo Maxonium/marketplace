@@ -7,7 +7,7 @@
 <body>
 <h1>Marketplace</h1><hr>
 <h4>Все объявления</h4>
-<#list products as productEntity>
+<#list productEntities as productEntity>
     <div>
         <p><b>${productEntity.title}<b/> ${productEntity.price} руб. | <a href="/product/${productEntity.id}">Подробнее...</a></p>
     </div>

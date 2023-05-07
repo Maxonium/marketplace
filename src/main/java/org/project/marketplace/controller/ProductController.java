@@ -16,16 +16,16 @@ public class ProductController
     private final ProductService productService;
 
     @GetMapping("/")
-    public String products(Model model)
+    public String mainPage(Model model)
     {
-        model.addAttribute("products", productService.allProducts());
-        return "products";
+        model.addAttribute("productEntities", productService.allProducts());
+        return "mainPage";
     }
 
     @GetMapping("/product/{id}")
     public String productInfo(@PathVariable Long id, Model model)
     {
-        model.addAttribute("product", productService.getProductById(id));
+        model.addAttribute("productEntity", productService.getProductById(id));
         return "product-info";
     }
 
