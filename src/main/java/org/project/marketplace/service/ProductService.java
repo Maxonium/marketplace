@@ -22,12 +22,11 @@ public class ProductService
         return productEntities;
     }
 
-    public ProductEntity getById(Long id)
+    public ProductEntity getProductById(Long id)
     {
         for (ProductEntity product : productEntities)
         {
-            if (product.getId().equals(id));
-            return product;
+            if (product.getId().equals(id)) return product;
         }
         return null;
     }
