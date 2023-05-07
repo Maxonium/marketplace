@@ -17,7 +17,7 @@ public class ProductService
         productEntities.add(new ProductEntity(++ID,"iPad", "cool thing", 2000, "Sochi", "Nick"));
     }
 
-    public List<ProductEntity> allSupplies()
+    public List<ProductEntity> allProducts()
     {
         return productEntities;
     }
