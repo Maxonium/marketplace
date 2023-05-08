@@ -15,6 +15,8 @@
     <div>
         <p><b>${productEntity.title}<b/> ${productEntity.price} руб. | <a href="/product/${productEntity.id}">Подробнее...</a></p>
     </div>
+    <#else>
+        <h3>Товаров нет</h3>
 </#list>
 <hr>
 <h3>Создать новый товар</h3>

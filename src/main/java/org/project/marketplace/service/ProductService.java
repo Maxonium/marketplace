@@ -22,7 +22,7 @@ public class ProductService
         List<ProductEntity> productEntityList = productRepository.findAll();
         if (title != null)
             {
-                productRepository.findByTitle(title);
+                return productRepository.findByTitle(title);
             }
         return productRepository.findAll();
     }
