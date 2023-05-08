@@ -10,12 +10,6 @@ import java.util.List;
 public class ProductService
 {
     private List<ProductEntity> productEntities = new ArrayList<>();
-    private long ID = 0;
-
-    {
-        productEntities.add(new ProductEntity(++ID,"PS5", "Game box", 10000, "Moscow", "Max"));
-        productEntities.add(new ProductEntity(++ID,"iPad", "cool thing", 2000, "Sochi", "Nick"));
-    }
 
     public List<ProductEntity> allProducts()
     {
@@ -33,7 +27,6 @@ public class ProductService
 
     public void save(ProductEntity product)
     {
-        product.setId(++ID);
         productEntities.add(product);
     }
 
