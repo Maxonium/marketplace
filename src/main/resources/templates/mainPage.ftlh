@@ -7,6 +7,10 @@
 <body>
 <h1>Marketplace</h1><hr>
 <h4>Все объявления</h4>
+<form action="/" method="get">
+    Поиск по названию объявления: <input type="text" name="title"><br>
+    <input type="submit" value="Поиск"/>
+</form>
 <#list productEntities as productEntity>
     <div>
         <p><b>${productEntity.title}<b/> ${productEntity.price} руб. | <a href="/product/${productEntity.id}">Подробнее...</a></p>
