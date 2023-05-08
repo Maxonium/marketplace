@@ -1,37 +1,46 @@
 package org.project.marketplace.service;
 
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.project.marketplace.entity.ProductEntity;
+import org.project.marketplace.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Slf4j
+@RequiredArgsConstructor
 public class ProductService
 {
+    public final ProductRepository productRepository;
     private List<ProductEntity> productEntities = new ArrayList<>();
 
-    public List<ProductEntity> allProducts()
+    public List<ProductEntity> allProducts(String title)
     {
-        return productEntities;
+        List<ProductEntity> productEntityList = productRepository.findAll();
+        if (title != null)
+            {
+                productRepository.findByTitle(title);
+            }
+        return productRepository.findAll();
     }
 
     public ProductEntity getProductById(Long id)
     {
-        for (ProductEntity productEntity : productEntities)
-        {
-            if (productEntity.getId().equals(id)) return productEntity;
-        }
-        return null;
+        // Поменять на orElseThrow с моделью er.404
+        return productRepository.findById(id).orElse(null);
     }
 
     public void save(ProductEntity product)
     {
-        productEntities.add(product);
+        log.info("saving new product {}", product );
+        productRepository.save(product);
     }
 
     public void delete(Long id)
     {
-        productEntities.removeIf(product -> product.getId().equals(id));
+        productRepository.deleteById(id);
     }
 }

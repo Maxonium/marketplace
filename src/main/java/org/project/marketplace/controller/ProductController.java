@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequiredArgsConstructor
@@ -16,9 +17,9 @@ public class ProductController
     private final ProductService productService;
 
     @GetMapping("/")
-    public String mainPage(Model model)
+    public String mainPage(@RequestParam(name = "title", required = false) String title, Model model)
     {
-        model.addAttribute("productEntities", productService.allProducts());
+        model.addAttribute("productEntities", productService.allProducts(title));
         return "mainPage";
     }
 
