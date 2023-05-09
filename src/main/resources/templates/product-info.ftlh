@@ -7,6 +7,9 @@
 <body>
 <h1>Marketplace</h1><hr>
 <h4>Подробная информация о товаре</h4>
+<#list listImages as img>
+    <img src="/listImages/${img.id}" height="60px"/><br><br>
+</#list>
 <b>Название товара: </b>${productEntity.title}<br>
 <b>Описание товара: </b>${productEntity.description}<br>
 <b>Цена: </b>${productEntity.price}<br>
