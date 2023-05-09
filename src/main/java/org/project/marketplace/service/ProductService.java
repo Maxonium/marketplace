@@ -15,13 +15,13 @@ import java.util.List;
 public class ProductService
 {
     public final ProductRepository productRepository;
-    private List<ProductEntity> productEntities = new ArrayList<>();
 
     public List<ProductEntity> allProducts(String title)
     {
-        List<ProductEntity> productEntityList = productRepository.findAll();
+        List<ProductEntity> productEntities = productRepository.findAll();
         if (title != null)
             {
+                // Добавить поиск по неполным title
                 return productRepository.findByTitle(title);
             }
         return productRepository.findAll();

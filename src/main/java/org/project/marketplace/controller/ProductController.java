@@ -23,6 +23,7 @@ public class ProductController
         return "mainPage";
     }
 
+    // Добавить кнопку возврат на главную страницу в product-info.ftlh
     @GetMapping("/product/{id}")
     public String productInfo(@PathVariable Long id, Model model)
     {
@@ -30,6 +31,7 @@ public class ProductController
         return "product-info";
     }
 
+    // Добавить защиту от пустой сущности
     @PostMapping("/product/create")
     public String createProduct(ProductEntity product)
     {
