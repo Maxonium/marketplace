@@ -5,8 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.project.marketplace.entity.ProductEntity;
 import org.project.marketplace.repository.ProductRepository;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
