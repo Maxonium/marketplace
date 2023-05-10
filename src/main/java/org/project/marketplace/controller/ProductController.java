@@ -32,7 +32,7 @@ public class ProductController
     {
         ProductEntity product = productService.getProductById(id);
         model.addAttribute("productEntity", product);
-        model.addAttribute("listImages", product.getListImages());
+        model.addAttribute("images", product.getListImages());
         return "product-info";
     }
 
