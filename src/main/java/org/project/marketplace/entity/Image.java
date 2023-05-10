@@ -4,6 +4,10 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Nationalized;
+import org.hibernate.annotations.Type;
+
+import java.sql.Blob;
 
 @Entity
 @Table(name = "images")
@@ -26,7 +30,7 @@ public class Image
     private String contentType;
     @Column(name = "isPreviewImages")
     private boolean isPreviewImages;
-    @Lob
+    @Nationalized
     private byte[] bytes;
 
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
