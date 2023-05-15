@@ -1,8 +1,8 @@
-package org.project.marketplace.controller;
+package org.project.marketplace.controllers;
 
 import lombok.RequiredArgsConstructor;
-import org.project.marketplace.entity.Image;
-import org.project.marketplace.repository.ImageRepository;
+import org.project.marketplace.entities.Image;
+import org.project.marketplace.repositories.ImageRepository;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
