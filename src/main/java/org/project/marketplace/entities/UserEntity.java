@@ -1,4 +1,4 @@
-package org.project.marketplace.entity;
+package org.project.marketplace.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

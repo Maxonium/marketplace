@@ -1,10 +1,10 @@
-package org.project.marketplace.service;
+package org.project.marketplace.services;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.project.marketplace.entity.Image;
-import org.project.marketplace.entity.ProductEntity;
-import org.project.marketplace.repository.ProductRepository;
+import org.project.marketplace.entities.Image;
+import org.project.marketplace.entities.ProductEntity;
+import org.project.marketplace.repositories.ProductRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
