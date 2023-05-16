@@ -22,7 +22,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/", "/registration")
                         .permitAll()
-                        .requestMatchers("/product/**", "/image/**")
+                        .requestMatchers("/product/**", "/images/**")
                         .hasAnyAuthority("ROLE_ADMIN", "ROLE_USER")
                         .anyRequest().
                         authenticated()
