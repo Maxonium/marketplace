@@ -1,7 +1,7 @@
 package org.project.marketplace.configurations;
 
 import lombok.RequiredArgsConstructor;
-import org.project.marketplace.services.CustomUserDetailService;
+import org.project.marketplace.exeptions.services.CustomUserDetailService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
