@@ -1,4 +1,4 @@
-package org.project.marketplace.exeptions.services;
+package org.project.marketplace.services;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

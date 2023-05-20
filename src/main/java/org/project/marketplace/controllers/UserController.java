@@ -2,7 +2,7 @@ package org.project.marketplace.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.project.marketplace.entities.UserEntity;
-import org.project.marketplace.exeptions.services.UserService;
+import org.project.marketplace.services.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
