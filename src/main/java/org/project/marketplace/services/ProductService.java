@@ -7,7 +7,6 @@ import org.project.marketplace.entities.ProductEntity;
 import org.project.marketplace.repositories.ProductRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -23,7 +22,6 @@ public class ProductService
         List<ProductEntity> productEntities = productRepository.findAll();
         if (title != null)
             {
-                // Добавить поиск по неполным title
                 return productRepository.findByTitle(title);
             }
         return productRepository.findAll();
@@ -31,7 +29,6 @@ public class ProductService
 
     public ProductEntity getProductById(Long id)
     {
-        // Поменять на orElseThrow с моделью er.404
         return productRepository.findById(id).orElse(null);
     }
 

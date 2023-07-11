@@ -11,7 +11,6 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,10 +25,10 @@ public class UserService implements UserDetailsService
 {
     private final UserRepository userRepository;
 
-//    public boolean createUser(UserEntity userEntity)
-//    {
-//
-//    }
+    public void createUser(UserEntity userEntity)
+    {
+        userRepository.save(userEntity);
+    }
 
     public Optional<UserEntity> findByLoginEmail(String loginEmail) {
         return userRepository.findByLoginEmail(loginEmail);
